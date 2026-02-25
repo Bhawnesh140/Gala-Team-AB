@@ -738,20 +738,7 @@ h6 {
     transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.hero-h1-support {
-  font-size: 0.75em;
-  /* relative to parent h1 */
-  font-weight: 300;
-  color: color-mix(in srgb, var(--color-primary-fg) 85%, transparent);
-}
 
-.hero-h1-primary {
-  display: block;
-  font-size: 1.25em;
-  /* 25% larger */
-  font-weight: 400;
-  margin-top: 0.1em;
-}
 
 
 .hero-tagline {
@@ -904,11 +891,6 @@ h6 {
     transform: translateY(100%);
     opacity: 0;
   }
-}
-
-50% {
-  opacity: 0.9;
-}
 }
 
 .scroll-indicator:hover {
@@ -1939,7 +1921,8 @@ address {
    CTA BLOCK SECTION — Premium White Card
    ============================================================ */
 .cta-block-section {
-  background-color: var(--color-bg); /* Match body background */
+  background-color: var(--color-bg);
+  /* Match body background */
   padding-block: var(--space-80) calc(var(--space-80) + 16px);
   padding-inline: var(--px-mobile);
   text-align: center;
@@ -2006,7 +1989,8 @@ address {
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  border-radius: 40px; /* pill shape */
+  border-radius: 40px;
+  /* pill shape */
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -2360,7 +2344,7 @@ address {
   }
 
   /* CTA block responsive */
-  
+
 
   /* Footer contact col stacks cleanly */
   .footer-contact-col {
@@ -2369,7 +2353,7 @@ address {
 }
 
 @media (min-width: 768px) {
-  
+
 
   /* Footer 3-col: remove old footer-cta right-align, contact col natural */
   .footer-contact-col {
