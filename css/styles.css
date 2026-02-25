@@ -1342,7 +1342,7 @@ h6 {
    TRUSTED BY SECTION
    ============================================================ */
 .trusted-section {
-  padding-block: var(--space-64);
+  padding-block: var(--space-32) var(--space-64);
   background-color: var(--color-secondary);
   overflow: hidden;
 }
@@ -1808,7 +1808,7 @@ address {
   }
 
   .trusted-section {
-    padding-block: var(--space-80);
+    padding-block: var(--space-48) var(--space-80);
   }
 
   .contact-section {
@@ -1933,8 +1933,8 @@ address {
   background-color: #ffffff;
   max-width: 900px;
   margin-inline: auto;
-  border-radius: 24px;
-  padding-block: var(--space-80);
+  border-radius: 12px;
+  padding-block: var(--space-56);
   padding-inline: var(--space-32);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
   display: flex;
@@ -1962,7 +1962,7 @@ address {
 }
 
 .cta-card-accent {
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
   color: var(--color-fg);
 }
