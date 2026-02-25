@@ -1073,6 +1073,11 @@ h6 {
 }
 
 @media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: var(--space-32);
+  }
+
   .services-grid {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-64);
@@ -1577,10 +1582,7 @@ address {
   padding-bottom: var(--space-48);
 }
 
-.footer-grid {
-  display: grid;
-  gap: 3rem;
-}
+
 
 .footer-logo {
   font-family: var(--font-heading);
@@ -1602,51 +1604,35 @@ address {
   letter-spacing: 0.15em;
 }
 
-.footer-links-group {
-  display: flex;
-  gap: 3rem;
-}
-
-.footer-links-col {
+.footer-col-nav nav,
+.footer-col-social nav {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-16);
 }
 
-.footer-links-col a,
-.footer-links-col span {
+.footer-col-nav a,
+.footer-col-social a {
   font-family: var(--font-body);
-  font-size: 0.6875rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   color: color-mix(in srgb, var(--color-bg) 65%, transparent);
-  /* Increased opacity */
   transition: color 0.4s var(--ease-luxury);
-  cursor: pointer;
   text-decoration: none;
 }
 
-.footer-links-col a:hover,
-.footer-links-col span:hover {
+.footer-col-nav a:hover,
+.footer-col-social a:hover {
   color: var(--color-primary);
 }
 
-.footer-cta a {
-  display: inline-flex;
-  padding: 0.75rem 2rem;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  font-family: var(--font-body);
-  font-size: 0.6875rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  transition: background-color 0.5s ease, color 0.5s ease;
+/* Base grid on mobile: 1 column */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-48);
 }
 
-.footer-cta a:hover {
-  background-color: var(--color-primary);
-  color: var(--color-primary-fg);
-}
 
 .footer-bottom {
   margin-top: 4rem;
@@ -1830,7 +1816,7 @@ address {
   }
 
   .footer-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-32);
     align-items: start;
   }
@@ -2007,15 +1993,11 @@ address {
 /* ============================================================
    FOOTER — CONTACT DETAILS COLUMN
    ============================================================ */
-.footer-contact-col {
+.footer-col-contact address,
+.footer-col-address address {
   display: flex;
   flex-direction: column;
-}
-
-.footer-contact-col address {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--space-24);
   font-style: normal;
 }
 
