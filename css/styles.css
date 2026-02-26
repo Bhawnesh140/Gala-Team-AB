@@ -1831,6 +1831,11 @@ address {
     font-size: clamp(4rem, 6vw, 5.5rem);
   }
 
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+    gap: var(--space-32);
+  }
+
   /* Scroll indicator repositioned slightly on wide screens */
   .scroll-indicator {
     bottom: 3rem;
