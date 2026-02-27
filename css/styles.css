@@ -568,16 +568,8 @@ h6 {
 
 .hero-bg img {
   width: 100%;
-  height: 115%;
+  height: 100%;
   object-fit: cover;
-  /* Start at scale 1.05, animate to 1 via JS class */
-  transform: scale(1.05);
-  transform-origin: center center;
-  transition: transform 2.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.hero-section.loaded .hero-bg img {
-  transform: scale(1);
 }
 
 /* ---- Gradient Overlays ---- */
@@ -624,29 +616,7 @@ h6 {
   }
 }
 
-/* ---- Intro Overlay — warm cream screen that makes logo pop ---- */
-.hero-intro-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 15;
-  /* between hero-bg (0) and logo-seal (20) */
-  pointer-events: none;
-  /* Warm cream — brand off-white, not harsh pure white */
-  background: rgba(245, 240, 232, 0.82);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* As logo starts settling: overlay recedes, hero image emerges */
-.hero-section.logo-settling .hero-intro-overlay {
-  opacity: 0.1;
-  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* Content phase: overlay fully removed */
-.hero-section.content-visible .hero-intro-overlay {
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
+/* Overlays removed */
 
 /* ---- Cinematic Logo Seal ---- */
 .hero-logo-seal {
@@ -722,8 +692,6 @@ h6 {
   padding-inline: var(--px-mobile);
   max-width: var(--max-width);
   margin-inline: auto;
-  /* Content hidden until logo settles */
-  pointer-events: none;
 }
 
 .hero-h1 {
@@ -734,11 +702,6 @@ h6 {
   line-height: 1.1;
   color: var(--color-primary-fg);
   max-width: 56rem;
-  /* Cinematic reveal state */
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
@@ -753,11 +716,6 @@ h6 {
   max-width: 32rem;
   line-height: 1.8;
   letter-spacing: 0.03em;
-  /* Reveal state */
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
 }
 
 .hero-cta {
@@ -772,16 +730,10 @@ h6 {
   text-transform: uppercase;
   width: fit-content;
   position: relative;
-  /* Reveal state */
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s,
-    letter-spacing 0.4s ease;
+  transition: letter-spacing 0.4s ease;
   overflow: hidden;
   padding: 0.75rem 1.5rem;
   border: 1px solid rgba(250, 247, 242, 0.35);
-  pointer-events: none;
 }
 
 /* CTA fill from left */
@@ -825,21 +777,7 @@ h6 {
   width: 2.5rem;
 }
 
-/* Content revealed state (JS adds .content-visible to hero section) */
-.hero-section.content-visible .hero-h1,
-.hero-section.content-visible .hero-tagline,
-.hero-section.content-visible .hero-cta {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero-section.content-visible .hero-content {
-  pointer-events: auto;
-}
-
-.hero-section.content-visible .hero-cta {
-  pointer-events: auto;
-}
+/* Reveal states removed */
 
 /* ---- Scroll Indicator ---- */
 .scroll-indicator {

@@ -745,12 +745,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveNavLink();
   initHeader();
   initMobileMenu();
-  initCinematicLoad();
-  initHeroScroll();
   initScrollReveal();
   initServices();
   initServiceMicroScroll();
-  initScrollIndicator();
   initProjectsGallery();
   initVisitModal();
   initSmoothScroll();
